@@ -1,0 +1,15 @@
+pandas
+numpy
+numba
+scipy
+sklearn
+seaborn
+matplotlib
+pyecharts
+pyfolio
+talib
+pandas_ta
+datetime
+time
+atrader
+
