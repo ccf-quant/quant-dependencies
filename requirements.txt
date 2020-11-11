@@ -9,4 +9,3 @@ pyecharts
 pyfolio
 talib
 pandas_ta
-atrader
