@@ -7,6 +7,6 @@ seaborn
 matplotlib
 pyecharts
 pyfolio
-TA-Lib
+ta-lib
 pandas_ta
 tushare
