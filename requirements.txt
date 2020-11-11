@@ -9,3 +9,4 @@ pyecharts
 pyfolio
 TA-Lib
 pandas_ta
+tushare
