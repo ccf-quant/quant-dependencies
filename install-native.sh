@@ -4,7 +4,9 @@ set -e
 
 for name in ta-lib; do
 (
-    bash native/ta-lib/install.sh
+    if [ "${SUDO}" = "1" ]; then
+        bash native/ta-lib/install.sh
+    fi
 );
 done
 
