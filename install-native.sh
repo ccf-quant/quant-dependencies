@@ -5,6 +5,10 @@ set -e
 ##################
 # quant-backtest #
 ##################
+# deps
+bash native/quant-backtest/deps.sh
+ldconfig -v
+
 # gcc-8
 bash native/quant-backtest/gcc-8/install.sh
 ldconfig -v
