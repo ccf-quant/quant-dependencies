@@ -1,4 +1,5 @@
-import codecs
+#!/usr/bin/env python
+
 import os
 import re
 from dataclasses import dataclass
@@ -7,7 +8,6 @@ from typing import *
 import click
 import mltk
 import redis
-import yaml
 
 
 class EngineConfig(mltk.Config):
@@ -92,6 +92,17 @@ def main(ctx, config_file):
             db=config.back_test.cache.redis_db,
         ),
     )
+
+
+@main.command()
+@click.option('--code-set', required=False, default=None)
+@click.pass_obj
+def ls(ctx: Context, code_set):
+    for key in ctx.cache_keys():
+        key_group = ctx.split_key(key)
+        if key_group:
+            if code_set is None or code_set == key_group['code_set']:
+                print(f'Item key={key!r}, {", ".join("{}={!r}".format(k, v) for k, v in key_group.items())}')
 
 
 @main.command()
